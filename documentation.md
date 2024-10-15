@@ -91,4 +91,4 @@ The attack was partially successful. The client experienced response delays in 1
    - Multiple attackers could successfully disrupt server-client communication, highlighting the potential danger of distributed DoS attacks.
 
 ## Conclusion
-The project successfully demonstrated how different types of DoS attacks affect a web server. While some attacks were ineffective under the tested conditions, SYN Flood attacks from multiple attackers proved to be impactful. Address spoofing added an extra layer of complexity, making the attack harder to detect and increasing its effectiveness.
+The project successfully demonstrated how different types of DoS attacks affect a web server. While some attacks were ineffective under the tested conditions, SYN Flood attacks from multiple attackers proved to be impactful. Address spoofing added an extra layer of complexity, making the attack harder to detect and increasing its effectiveness. For a detailed step-by-step instruction for this project visit the ## Network Security DoS Attack.pdf file.
