@@ -16,6 +16,8 @@ This project demonstrates the impact of various Denial of Service (DoS) attacks 
 
 ## File
 - `scenario-ddos.xml`: CORE GUI scenario file.
+- `start.sh`: Script used to initiate the server-side processes.
+- `run_curl.sh`: Script used to simulate client requests during attacks.
 
 ## Conclusion
 The project demonstrates how DoS attacks can overwhelm a server depending on traffic magnitude and attacker configurations.
