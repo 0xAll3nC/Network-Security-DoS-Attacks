@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario name="/tmp/tmpq74b79ud">
+  <networks>
+    <network id="1" name="Switch" icon="" canvas="0" type="SWITCH">
+      <position x="111.9056167602539" y="144.8027801513672" lat="47.57785018782044" lon="-122.13081632086126" alt="2.0"/>
+    </network>
+    <network id="2" name="Switch" icon="" canvas="0" type="SWITCH">
+      <position x="385.9056091308594" y="145.8027801513672" lat="47.57784109793149" lon="-122.12712424514633" alt="2.0"/>
+    </network>
+    <network id="3" name="Switch" icon="" canvas="0" type="SWITCH">
+      <position x="101.9056167602539" y="284.8027648925781" lat="47.57657758815104" lon="-122.13095106815388" alt="2.0"/>
+    </network>
+    <network id="4" name="Switch" icon="" canvas="0" type="SWITCH">
+      <position x="387.9056091308594" y="288.8027648925781" lat="47.57654122770203" lon="-122.1270972956878" alt="2.0"/>
+    </network>
+  </networks>
+  <devices>
+    <device id="5" name="Router" icon="" canvas="0" type="router" class="" image="">
+      <position x="244.90560913085938" y="218.8027801513672" lat="47.57717753177553" lon="-122.12902418197226" alt="2.0"/>
+      <configservices>
+        <service name="OSPFv3"/>
+        <service name="IPForward"/>
+        <service name="OSPFv2"/>
+        <service name="zebra"/>
+      </configservices>
+    </device>
+    <device id="6" name="Client" icon="" canvas="0" type="PC" class="" image="">
+      <position x="112.48274993896484" y="30.2056827545166" lat="47.578891852257726" lon="-122.13080854414792" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="7" name="Server" icon="" canvas="0" type="PC" class="" image="">
+      <position x="386.1941833496094" y="34.59709167480469" lat="47.57885193562069" lon="-122.12712035668686" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="8" name="Attacker1" icon="" canvas="0" type="PC" class="" image="">
+      <position x="101.9056167602539" y="372.8027648925781" lat="47.57577765244038" lon="-122.13095106815388" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="9" name="Attacker2" icon="" canvas="0" type="PC" class="" image="">
+      <position x="388.5656433105469" y="370.0913391113281" lat="47.57580229996727" lon="-122.12708840190594" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+  </devices>
+  <links>
+    <link node1="1" node2="5">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:00" ip4="10.0.0.1" ip4_mask="24" ip6="2001::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="130000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="1" node2="6">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:04" ip4="10.0.0.20" ip4_mask="24" ip6="2001::14" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="5">
+      <iface2 id="1" name="eth1" mac="00:00:00:aa:00:01" ip4="10.0.1.1" ip4_mask="24" ip6="2001:0:0:1::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="100000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="7">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:05" ip4="10.0.1.20" ip4_mask="24" ip6="2001:0:0:1::14" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="3" node2="5">
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:02" ip4="10.0.2.1" ip4_mask="24" ip6="2001:0:0:2::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="90000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="3" node2="8">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:06" ip4="10.0.2.20" ip4_mask="24" ip6="2001:0:0:2::14" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="4" node2="5">
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:03" ip4="10.0.3.1" ip4_mask="24" ip6="2001:0:0:3::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="70000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="4" node2="9">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:07" ip4="10.0.3.20" ip4_mask="24" ip6="2001:0:0:3::14" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+  </links>
+  <configservice_configurations>
+    <service name="OSPFv3" node="5"/>
+    <service name="IPForward" node="5"/>
+    <service name="OSPFv2" node="5"/>
+    <service name="zebra" node="5"/>
+    <service name="DefaultRoute" node="6"/>
+    <service name="DefaultRoute" node="7"/>
+    <service name="DefaultRoute" node="8"/>
+    <service name="DefaultRoute" node="9"/>
+  </configservice_configurations>
+  <session_origin lat="47.579166412353516" lon="-122.13232421875" alt="2.0" scale="150.0"/>
+  <session_options>
+    <configuration name="controlnet" value=""/>
+    <configuration name="controlnet0" value=""/>
+    <configuration name="controlnet1" value=""/>
+    <configuration name="controlnet2" value=""/>
+    <configuration name="controlnet3" value=""/>
+    <configuration name="controlnet_updown_script" value=""/>
+    <configuration name="enablerj45" value="1"/>
+    <configuration name="preservedir" value="0"/>
+    <configuration name="enablesdt" value="0"/>
+    <configuration name="sdturl" value="tcp://127.0.0.1:50000/"/>
+    <configuration name="ovs" value="0"/>
+    <configuration name="platform_id_start" value="1"/>
+    <configuration name="nem_id_start" value="1"/>
+    <configuration name="link_enabled" value="1"/>
+    <configuration name="loss_threshold" value="30"/>
+    <configuration name="link_interval" value="1"/>
+    <configuration name="link_timeout" value="4"/>
+    <configuration name="mtu" value="0"/>
+  </session_options>
+  <session_metadata>
+    <configuration name="edges" value="[]"/>
+    <configuration name="hidden" value="[]"/>
+    <configuration name="canvas" value="{&quot;gridlines&quot;: true, &quot;canvases&quot;: [{&quot;id&quot;: 1, &quot;wallpaper&quot;: null, &quot;wallpaper_style&quot;: 1, &quot;fit_image&quot;: false, &quot;dimensions&quot;: [1000, 750]}]}"/>
+    <configuration name="shapes" value="[]"/>
+  </session_metadata>
+  <default_services>
+    <node type="mdr">
+      <service name="zebra"/>
+      <service name="OSPFv3MDR"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="PC">
+      <service name="DefaultRoute"/>
+    </node>
+    <node type="prouter"/>
+    <node type="router">
+      <service name="zebra"/>
+      <service name="OSPFv2"/>
+      <service name="OSPFv3"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="host">
+      <service name="DefaultRoute"/>
+      <service name="SSH"/>
+    </node>
+  </default_services>
+</scenario>
